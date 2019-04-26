@@ -9,6 +9,10 @@ interface LessonService {
 
 @Service
 class LessonServiceImpl: LessonService {
+    init {
+        println("Service Start!!!")
+    }
+
     override fun sayLove(name: String): Mono<String> =
             Mono.just("I love $name.")
 }
